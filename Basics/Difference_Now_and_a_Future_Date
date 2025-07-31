@@ -1,0 +1,7 @@
+import datetime
+
+now = datetime.datetime.now()
+future = datetime.datetime(2025, 8, 10, 15, 0)
+
+diff = future - now
+print(f"Remaining {diff.days} days и {diff.seconds // 3600} hours")
