@@ -2,14 +2,14 @@
 This repository contains a collection of beginner-to-intermediate Python exercises focused on working with the datetime module. 
 
 # Topics Covered:
-# Creating and formatting dates
+ Creating and formatting dates
 
-# Date comparisons
+ Date comparisons
 
-# Calculating time differences
+ Calculating time differences
 
-# Working with timedelta
+  Working with timedelta
 
-# Parsing user input into date objects
+  Parsing user input into date objects
 
-# Practical use cases (e.g., countdowns, age calculators, scheduling)
+  Practical use cases (e.g., countdowns, age calculators, scheduling)
