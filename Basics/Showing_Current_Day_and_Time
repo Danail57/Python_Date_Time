@@ -1,0 +1,7 @@
+import datetime
+
+current_time = datetime.datetime.now()
+formated_date = current_time.strftime("%d. %m. %Y")
+formated_time = current_time.strftime("%H:%M:%S")
+
+print(f"Today's date is: {formated_date} and today's time is: {formated_time}")
