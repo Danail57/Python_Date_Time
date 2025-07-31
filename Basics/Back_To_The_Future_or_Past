@@ -1,0 +1,34 @@
+import datetime
+
+now = datetime.datetime.now()
+choice = input("Do you want to check time passed or time remaining? (type 'passed' or 'remaining'): ").lower()
+user_input = input("Enter a date and time (YYYY-MM-DD HH:MM): ")
+
+try:
+    user_datetime = datetime.datetime.strptime(user_input, "%Y-%m-%d %H:%M")
+
+    if choice == "remaining":
+        if user_datetime <= now:
+            print("The date you entered is not in the future.")
+        else:
+            diff = user_datetime - now
+            days = diff.days
+            hours = diff.seconds // 3600
+            minutes = (diff.seconds % 3600) // 60
+            print(f"Time remaining: {days} days, {hours} hours, and {minutes} minutes.")
+
+    elif choice == "passed":
+        if user_datetime >= now:
+            print("The date you entered is not in the past.")
+        else:
+            diff = now - user_datetime
+            days = diff.days
+            hours = diff.seconds // 3600
+            minutes = (diff.seconds % 3600) // 60
+            print(f"Time passed: {days} days, {hours} hours, and {minutes} minutes ago.")
+
+    else:
+        print("Invalid choice. Please type 'passed' or 'remaining'.")
+
+except ValueError:
+    print("Invalid date format. Please use YYYY-MM-DD HH:MM.")
