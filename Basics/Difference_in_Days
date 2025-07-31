@@ -1,0 +1,7 @@
+import datetime
+
+date1 = datetime.date(2025, 7, 31)
+date2 = datetime.date(2025, 8, 5)
+
+difference = date2 - date1
+print(f"The difference is {difference.days} days")  
