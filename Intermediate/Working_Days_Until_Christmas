@@ -1,0 +1,20 @@
+from datetime import date, timedelta
+
+def working_days_until_christmas():
+    today = date.today()
+    christmas = date(today.year, 12, 25)
+
+    if today > christmas:
+        christmas = date(today.year + 1, 12, 25)
+
+    delta = christmas - today
+    working_days = 0
+
+    for i in range(delta.days):
+        day = today + timedelta(days=i)
+        if day.weekday() < 5:  # Monday=0, Sunday=6
+            working_days += 1
+
+    return working_days
+
+print(f"Working days until Christmas: {working_days_until_christmas()}")
