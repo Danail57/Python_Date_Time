@@ -1,1 +1,13 @@
+from datetime import datetime
+import pytz
 
+date_str = input("Enter date and hour (YYYY-MM-DD HH:MM): ")
+local_time = datetime.strptime(date_str, "%Y-%m-%d %H:%M")
+
+sofia_timezone = pytz.timezone('Europe/Sofia')
+local_time = sofia_timezone.localize(local_time)
+
+ny_timezone = pytz.timezone('America/New_York')
+ny_time = local_time.astimezone(ny_timezone)
+
+print("Time in New York is:", ny_time.strftime("%Y-%m-%d %H:%M"))
