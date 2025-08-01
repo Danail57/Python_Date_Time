@@ -1,1 +1,10 @@
+from datetime import datetime, date
 
+today = date.today()
+christmas = date(today.year, 12, 25)
+
+if today > christmas:
+    christmas = date(today.year + 1, 12, 25)
+
+days_left = (christmas - today).days
+print(f"Days until Christmas: {days_left}")
